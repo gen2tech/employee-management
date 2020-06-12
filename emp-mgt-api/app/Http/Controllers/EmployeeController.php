@@ -21,12 +21,6 @@ class EmployeeController extends Controller
     public function __construct()
     {
 
-        /* header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Headers: access");
-        header("Access-Control-Allow-Methods: GET,POST, OPTION");
-        header("Content-Type: application/json; charset=UTF-8");
-        header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"); */
-
     }
 
 
@@ -135,6 +129,9 @@ class EmployeeController extends Controller
 
     public function deleteEmployee($id){
         $employee = Employee::findOrFail($id);
+        if(file_exists(storage_path('app/avatars/'.$id.'.png'))){
+            unlink(storage_path('app/avatars/'.$id.'.png'));
+        }
         if($employee->delete()){
             $json = ['key'=>1,'txt'=>"Employee's details deleted"];
         }else{

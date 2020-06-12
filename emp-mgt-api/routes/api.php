@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 }); */
 
-Route::get('/list_employees', 'EmployeeController@listEmployees');
-Route::get('/get_employee/{id}', 'EmployeeController@getEmployee');
-Route::post('/add_employee', 'EmployeeController@addEmployee');
-Route::post('/update_employee/{id}', 'EmployeeController@updateEmployee');
-//Route::put('/update_employee/{id}', 'EmployeeController@updateEmployee');
-Route::delete('/delete_employee/{id}', 'EmployeeController@deleteEmployee');
+Route::get('/list_employees', 'EmployeeController@listEmployees')->middleware('cors');
+Route::get('/get_employee/{id}', 'EmployeeController@getEmployee')->middleware('cors');
+Route::post('/add_employee', 'EmployeeController@addEmployee')->middleware('cors');
+Route::post('/update_employee/{id}', 'EmployeeController@updateEmployee')->middleware('cors');
+//Route::put('/update_employee/{id}', 'EmployeeController@updateEmployee')->middleware('cors');
+Route::delete('/delete_employee/{id}', 'EmployeeController@deleteEmployee')->middleware('cors');
