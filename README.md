@@ -17,14 +17,6 @@ Open Terminal/Cmd and go to PHP server root folder then enter "git clone https:/
 - then run npm start or yarn start (Also your choice)
 - Note that the CRUD operation might not work without setting up the Server API folder first (Used PHP/Laravel) 
 
-====== For the API Requests ========
-- In the api folder do the following
-	- If you want to use mysql - Create a Mysql/MariaDB database and import the schema db/mysql.sql into it
-	- Open inc/config.php and set "define('DB_DRIVER', 'mysql');" and make sure you database details are correct
-	
-- If you want to use sqlite3 just open inc/config.php and set "define('DB_DRIVER', 'sqlite');"
-
-
 If somehow the api request is not going through, it can be that the whole process wasn't as described above then
 
 - Open the file "constants.js" from the folder "src" in the react folder and edit const "APP_URL" eg. const APP_URL = 'http://localhost/emp-mgt-api/' for the localhost;
