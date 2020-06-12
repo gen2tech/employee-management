@@ -20,6 +20,7 @@ class App extends Component {
   render() {
     return (
     <Router>
+    <div id='wrap'>  
     <div className="container shadow">
 
     {/* Navigation */}
@@ -64,6 +65,7 @@ class App extends Component {
           <Route exact path='/edit/:id' component={ Edit } />
           <Route exact path='/crud' component={ Crud } />
       </Switch>
+    </div>
     </div>
     </Router>
     );
