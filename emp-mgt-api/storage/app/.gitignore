@@ -1,4 +1,4 @@
 *
-!avatars/*.png
 !public/
+!avatars/
 !.gitignore
