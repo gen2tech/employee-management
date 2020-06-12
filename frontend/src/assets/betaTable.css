@@ -1,0 +1,77 @@
+.beta-table{
+    width: 100% !important;
+    border-collapse:separate; 
+    border-spacing:0 15px; 
+}
+
+.beta-table .table-header {
+    /* background-color: #121C45; */
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #000;
+}
+
+.beta-table .table-row {
+    background-color: #fff;
+    /* box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1); */
+}
+
+.table-row:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.table-row:hover .feather.feather-trash-2 {
+    color:#ec5757!important;
+}
+.table-row:hover .feather.feather-edit-3 {
+    color:#577aec!important;
+}
+
+.beta-table tr td:first-child {
+    border-top-left-radius: 1.3rem!important;
+    border-bottom-left-radius: 1.3rem!important;
+}
+
+.beta-table tr td:last-child {
+    border-top-right-radius: 1.3rem!important;
+    border-bottom-right-radius: 1.3rem!important;
+}
+
+@media all and (max-width: 767px) {
+    .beta-table {
+        width: 100% !important;
+        margin-top: 5rem;
+    }
+
+    .beta-table .table-header {
+        display: none;
+    }
+
+    .beta-table tr {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .beta-table .betacol {
+        flex-basis: 100%;
+        display: flex;
+        padding: 10px 0;
+    }
+
+    .beta-table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right !important;
+        width: auto;
+    }
+
+    .beta-table .betacol:before {
+        color: #6c7a89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: left;
+        width: auto;
+        padding-left: .75rem;
+    }
+}
