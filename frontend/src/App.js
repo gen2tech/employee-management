@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import './assets/betaTable.css';
 import './assets/custom.css';
+import Footer from './components/footer';
 import Svg from './components/svg';
 import logo from './assets/images/logo.png';
 import userAvatar from './assets/images/user.png';
@@ -66,7 +67,7 @@ class App extends Component {
           <Route exact path='/crud' component={ Crud } />
       </Switch>
     </div>
-    <div className='text-center'>© 2020 Designed and Developed by Ogunyemi Oludayo +2348074288823</div>
+        <Footer />
     </div>
     </Router>
     );

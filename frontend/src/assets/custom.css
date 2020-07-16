@@ -113,3 +113,12 @@ left: 0;
 height: 100%;
 width: 100%;
 }
+
+
+.page-footer{
+  padding-top: 0!important;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
