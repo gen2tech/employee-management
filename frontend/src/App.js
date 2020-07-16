@@ -66,6 +66,7 @@ class App extends Component {
           <Route exact path='/crud' component={ Crud } />
       </Switch>
     </div>
+    <div className='text-center'>© 2020 Designed and Developed by Ogunyemi Oludayo +2348074288823</div>
     </div>
     </Router>
     );
